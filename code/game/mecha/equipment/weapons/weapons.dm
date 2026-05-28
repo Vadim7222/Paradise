@@ -83,7 +83,7 @@
 	name = "CH-PS \"Firedart\" Laser"
 	icon_state = "mecha_firedart"
 	origin_tech = "magnets=3;combat=3;engineering=3"
-	energy_drain = 40
+	energy_drain = 300
 	projectile = /obj/projectile/beam
 	fire_sound = 'sound/weapons/gunshots/1laser4.ogg'
 	harmful = TRUE
@@ -94,8 +94,9 @@
 	origin_tech = "combat=3"
 	projectile = /obj/projectile/beam/disabler
 	fire_sound = 'sound/weapons/plasma_cutter.ogg'
-	projectiles_per_shot = 2
-	projectile_delay = 1
+	energy_drain = 300
+	projectiles_per_shot = 3
+	projectile_delay = 0.5
 	harmful = FALSE
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy
@@ -103,7 +104,7 @@
 	name = "CH-LC \"Solaris\" Laser Cannon"
 	icon_state = "mecha_solaris"
 	origin_tech = "magnets=4;combat=4;engineering=3"
-	energy_drain = 60
+	energy_drain = 700
 	projectile = /obj/projectile/beam/laser/heavylaser
 	fire_sound = 'sound/weapons/gunshots/1pulse.ogg'
 
@@ -112,7 +113,7 @@
 	name = "mkIV Ion Heavy Cannon"
 	icon_state = "mecha_ion"
 	origin_tech = "materials=4;combat=5;magnets=4"
-	energy_drain = 120
+	energy_drain = 500
 	projectile = /obj/projectile/ion
 	fire_sound = 'sound/weapons/ionrifle.ogg'
 
@@ -122,7 +123,7 @@
 	desc = "Having carefully studied the ion rifle, the brightest minds of the Gorlex Marauders found duct tape and stuck two more barrels! Impressive, isn't it?"
 	icon_state = "mecha_ion"
 	origin_tech = "materials=4;combat=5;magnets=4"
-	energy_drain = 40
+	energy_drain = 350
 	projectile = /obj/projectile/ion/weak
 	fire_sound = 'sound/weapons/ionrifle.ogg'
 	projectiles_per_shot = 3
@@ -134,7 +135,7 @@
 	desc = "A weapon for combat exosuits. Fires bolts of electricity similar to the experimental tesla engine"
 	icon_state = "mecha_teslacannon"
 	origin_tech = "materials=4;engineering=4;combat=6;magnets=6"
-	energy_drain = 500
+	energy_drain = 800
 	projectile = /obj/projectile/energy/tesla/cannon
 	fire_sound = 'sound/magic/lightningbolt.ogg'
 	harmful = TRUE
@@ -145,8 +146,8 @@
 	desc = "A weapon for combat exosuits. Fires beams of X-Rays that pass through solid matter."
 	icon_state = "mecha_xray"
 	origin_tech = "combat=6;materials=4;programming=6"
-	energy_drain = 120
-	projectile = /obj/projectile/beam/xray
+	energy_drain = 500
+	projectile = /obj/projectile/beam/xray/mecha
 	fire_sound = 'sound/weapons/gunshots/1xray.ogg'
 	harmful = TRUE
 
@@ -161,7 +162,7 @@
 	desc = "A weapon for combat exosuits. Fires beams of extreme heat that set targets on fire."
 	icon_state = "mecha_immolator"
 	origin_tech = "materials=4;engineering=4;combat=6;magnets=6"
-	energy_drain = 80
+	energy_drain = 400
 	variance = 25
 	projectiles_per_shot = 4
 	projectile = /obj/projectile/beam/immolator/mech
@@ -172,7 +173,7 @@
 	equip_cooldown = 3 SECONDS
 	name = "eZ-13 mk2 Heavy pulse rifle"
 	icon_state = "mecha_pulse"
-	energy_drain = 120
+	energy_drain = 600
 	origin_tech = "materials=3;combat=6;powerstorage=4"
 	projectile = /obj/projectile/beam/pulse/hitscan/heavy
 	fire_sound = 'sound/weapons/gunshots/1pulse.ogg'
@@ -182,7 +183,7 @@
 	name = "PBT \"Pacifier\" Mounted Taser"
 	icon_state = "mecha_taser"
 	origin_tech = "combat=3"
-	energy_drain = 20
+	energy_drain = 300
 	equip_cooldown = 0.8 SECONDS
 	projectile = /obj/projectile/energy/electrode
 	fire_sound = 'sound/weapons/gunshots/1taser.ogg'
@@ -287,7 +288,7 @@
 	projectile = /obj/projectile/bullet/incendiary/shell/dragonsbreath/mecha
 	fire_sound = 'sound/weapons/gunshots/1m90.ogg'
 	projectiles = 24
-	projectile_energy_cost = 15
+	projectile_energy_cost = 60
 	harmful = TRUE
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/carbine/silenced
@@ -313,7 +314,7 @@
 	projectile = /obj/projectile/bullet/midbullet
 	fire_sound = 'sound/weapons/gunshots/1shotgun_auto.ogg'
 	projectiles = 40
-	projectile_energy_cost = 25
+	projectile_energy_cost = 40
 	projectiles_per_shot = 4
 	variance = 25
 	harmful = TRUE
@@ -334,7 +335,7 @@
 	equip_cooldown = 0.8 SECONDS
 	projectile = /obj/projectile/bullet/pellet/flechette
 	projectiles = 50
-	projectile_energy_cost = 10 // сохраняется то же энергопотребление при увеличенном дпс
+	projectile_energy_cost = 20 // сохраняется то же энергопотребление при увеличенном дпс
 	projectiles_per_shot = 5
 	variance = 15
 
@@ -342,11 +343,11 @@
 	name = "Ultra AC 2"
 	icon_state = "mecha_uac2"
 	origin_tech = "combat=4"
-	equip_cooldown = 1.2 SECONDS
+	equip_cooldown = 1 SECONDS
 	projectile = /obj/projectile/bullet/weakbullet3
 	fire_sound = 'sound/weapons/gunshots/1mg2.ogg'
 	projectiles = 300
-	projectile_energy_cost = 20
+	projectile_energy_cost = 70
 	projectiles_per_shot = 3
 	variance = 6
 	projectile_delay = 2
@@ -355,9 +356,9 @@
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg/syndi
 	name = "AC 2 \"Special\""
 	desc = "Cr20c inside!"
-	equip_cooldown = 0.8 SECONDS
+	equip_cooldown = 0.7 SECONDS
 	projectile = /obj/projectile/bullet/midbullet_AC2S
-	projectile_energy_cost = 14
+	projectile_energy_cost = 50
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg/dual
 	name = "XMG-9 Autocannon"
@@ -367,11 +368,11 @@
 	name = "AMLG-90"
 	icon_state = "mecha_amlg90"
 	origin_tech = "combat=4"
-	equip_cooldown = 1.2 SECONDS
+	equip_cooldown = 1 SECONDS
 	projectile = /obj/projectile/beam/laser
 	fire_sound = 'sound/weapons/gunshots/gunshot_lascarbine.ogg'
 	projectiles = 150
-	projectile_energy_cost = 40
+	projectile_energy_cost = 80
 	projectiles_per_shot = 3
 	variance = 6
 	projectile_delay = 2
@@ -384,7 +385,7 @@
 	projectile = /obj/item/missile/light
 	fire_sound = 'sound/weapons/gunshots/1launcher.ogg'
 	projectiles = 8
-	projectile_energy_cost = 1000
+	projectile_energy_cost = 1400
 	equip_cooldown = 6 SECONDS
 	var/missile_speed = 2
 	var/missile_range = 30
@@ -468,7 +469,7 @@
 	fire_sound = 'sound/weapons/gunshots/1grenlauncher.ogg'
 	projectiles = 6
 	missile_speed = 1.5
-	projectile_energy_cost = 800
+	projectile_energy_cost = 1200
 	var/det_time = 20
 	size = 1
 
@@ -491,7 +492,7 @@
 	origin_tech = "combat=4;materials=4"
 	projectiles = 3
 	projectile = /obj/item/grenade/clusterbuster
-	projectile_energy_cost = 1600 //getting off cheap seeing as this is 3 times the flashbangs held in the grenade launcher.
+	projectile_energy_cost = 2400 //getting off cheap seeing as this is 3 times the flashbangs held in the grenade launcher.
 	equip_cooldown = 9 SECONDS
 
 // Limited version of the clusterbang launcher that can't reload
@@ -515,7 +516,7 @@
 	fire_sound = 'sound/items/bikehorn.ogg'
 	projectiles = 15
 	missile_speed = 1.5
-	projectile_energy_cost = 100
+	projectile_energy_cost = 200
 	equip_cooldown = 2 SECONDS
 	harmful = FALSE
 
@@ -543,7 +544,7 @@
 	fire_sound = 'sound/items/bikehorn.ogg'
 	projectiles = 15
 	missile_speed = 1.5
-	projectile_energy_cost = 100
+	projectile_energy_cost = 200
 	equip_cooldown = 1 SECONDS
 	harmful = FALSE
 
@@ -573,7 +574,7 @@
 	fire_sound = 'sound/weapons/grenadelaunch.ogg'
 	projectiles = 10
 	missile_speed = 1
-	projectile_energy_cost = 50
+	projectile_energy_cost = 250
 	equip_cooldown = 1 SECONDS
 	harmful = FALSE
 
@@ -602,7 +603,7 @@
 	item_state = "plasmacutter"
 	lefthand_file = 'icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/guns_righthand.dmi'
-	energy_drain = 30
+	energy_drain = 300
 	origin_tech = "materials=3;plasmatech=4;engineering=3"
 	projectile = /obj/projectile/plasma/adv/mech
 	fire_sound = 'sound/weapons/gunshots/1laser5.ogg'
@@ -619,7 +620,7 @@
 	name = "Exosuit Proto-kinetic Accelerator"
 	desc = "An exosuit-mounted mining tool that does increased damage in low pressure. Drawing from an onboard power source allows it to project further than the handheld version."
 	icon_state = "mecha_kineticgun"
-	energy_drain = 50
+	energy_drain = 100
 	size = 1
 	projectile = /obj/projectile/kinetic/mech
 	fire_sound = 'sound/weapons/kenetic_accel.ogg'
