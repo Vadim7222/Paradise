@@ -34,7 +34,8 @@
 /obj/projectile/energy/tesla/cannon
 	name = "tesla orb"
 	power = 2e4
-	damage = 15 //Mech man big
+	damage = 20 //Mech man big
+	zap_range = 4
 
 /obj/projectile/energy/tesla_cannon
 	name = "tesla bolt"
