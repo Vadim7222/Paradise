@@ -137,6 +137,13 @@
 	muzzle_type = /obj/effect/projectile/muzzle/xray
 	impact_type = /obj/effect/projectile/impact/xray
 
+/obj/projectile/beam/xray/mecha
+	damage = 25
+	tile_dropoff = 0.5
+	forcedodge = -1
+	range = 20
+	armour_penetration = 100
+
 /obj/projectile/beam/xray/get_ru_names()
 	return list(
 		NOMINATIVE = "рентгеновский луч",
@@ -575,7 +582,7 @@
 
 /obj/projectile/beam/immolator/mech
 	name = "mecha immolation beam"
-	damage = 15
+	damage = 25
 
 /obj/projectile/beam/immolator/mech/get_ru_names()
 	return list(
